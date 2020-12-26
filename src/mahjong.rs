@@ -7,6 +7,7 @@ use tile::{Dragon, Suit, Tile, Wind};
 
 pub struct Mahjong {
     pub tiles: Vec<Tile>,
+    index: usize,
 }
 
 impl Mahjong {
@@ -29,7 +30,12 @@ impl Mahjong {
 
         tiles.shuffle(&mut thread_rng());
 
-        assert_eq!(tiles.len(), 136);
-        Mahjong { tiles }
+        Mahjong { tiles, index: 0 }
+    }
+
+    pub fn draw(&mut self) -> Option<&Tile> {
+        let tile = self.tiles.get(self.index);
+        self.index += 1;
+        tile
     }
 }

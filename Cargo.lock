@@ -48,6 +48,16 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "1482821306169ec4d07f6aca392a4681f66c75c9918aa49641a2595db64053cb"
 
 [[package]]
+name = "mahjong"
+version = "0.1.0"
+dependencies = [
+ "itertools",
+ "rand",
+ "strum",
+ "strum_macros",
+]
+
+[[package]]
 name = "ppv-lite86"
 version = "0.2.10"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -109,16 +119,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "3190ef7066a446f2e7f42e239d161e905420ccab01eb967c9eb27d21b2322a73"
 dependencies = [
  "rand_core",
-]
-
-[[package]]
-name = "riichi_mahjong"
-version = "0.1.0"
-dependencies = [
- "itertools",
- "rand",
- "strum",
- "strum_macros",
 ]
 
 [[package]]
